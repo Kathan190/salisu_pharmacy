@@ -17,6 +17,10 @@
                 --border:.2rem solid var(--green);
             }
 
+            section:nth-child(even){
+                background:#f5f5f5;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
@@ -112,6 +116,35 @@
                 color:var(--green);
                 background:#fff;
                 margin-left:1rem;
+            }
+            .icons-container{
+                display:grid;
+                gap:2rem;
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                padding-top: 5rem;
+                padding-bottom: 5rem; 
+            }
+            .icons-container .icons{
+                border:var(--border);
+                box-shadow: var(--box-shadow);
+                border-radius: .5rem;
+                text-align: center;
+                padding-top: 2.5rem;
+            }
+            .icons-container .icons i{
+                font-size: 4.5rem;
+                color: var(--green);
+                padding-bottom: .7rem;
+            }
+            .icons-container .icons h3{
+                font-size: 4.5rem;
+                color: var(--black);
+                padding: .5rem 0;
+                text-shadow: var(--text-shadow);
+            }
+            .icons-container .icons p{
+                font-size: 1.7rem;
+                color: var(--light-color);
             }
             @medial(max-width:991px){
                 html{
@@ -214,18 +247,48 @@
     </section>
     <!-- home section end -->
 
+    <!-- icon section start -->
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fa fa-user-md"></i>
+            <h3>140+</h3>
+            <p>Doctors at work</p>
+        </div>
+
+        <div class="icons">
+            <i class="fa fa-users"></i>
+            <h3>1040+</h3>
+            <p>Satiesfied Patients</p>
+        </div>
+
+        <div class="icons">
+            <i class="fa fa-procedures"></i>
+            <h3>500+</h3>
+            <p>Bed facility</p>
+        </div>
+    
+        <div class="icons">
+            <i class="fa fa-hospital"></i>
+            <h3>80+</h3>
+            <p>Available Hospitals</p>
+        </div>
+
+    </section>
+
+    <!-- icon section end -->
+
     <!-- javascript section start -->
     <script>
         let menu = document.querySelector('#menu-btn');
-        let navbar = document.querySelector('.navabr');
+        let navbar = document.querySelector('.navbar');
 
         menu.onclick = () => {
-            menu.classList.toggle('fa-times');
+            menu.classList.toggle('.navbar');
             navbar.classList.toggle('active');
         }
 
         window.onscroll = () => {
-            menu.classList.remove('fa-times');
+            menu.classList.remove('fa-bars');
             navbar.classList.remove('active');
         }
     </script>
